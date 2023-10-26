@@ -1,0 +1,8 @@
+express
+morgan
+compression
+body-parser
+mysql
+cors
+
+nodemon
