@@ -1,6 +1,8 @@
 //Express: su objetivo es la de poder crear un servidor web en un puerto cualqiera
 // creamos una instancia de express, es basicamente un objeto ;
 const express = require('express');
+const dotenv = require('dotenv')
+dotenv.config()
 
 //     ---- MODULOS ----     //
 

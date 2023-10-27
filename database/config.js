@@ -4,12 +4,10 @@ const mysql = require("mysql") //  instalar mysql
 
 const db = mysql.createConnection({
 
-    host: "localhost",
-    user: "root",
-    password: "hola123",
-    database: "sangucheria"
-    
-
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
 
 })
 

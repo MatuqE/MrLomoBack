@@ -29,7 +29,7 @@ const registrar = (req, res) => {
   const nombre = req.body.nombre;
 
   db.query(
-    `INSERT INTO ingredientes ( nombre ) values("${nombre}");`,
+    `CALL AgregarIngredienteYStock("${nombre}");`,
     (err, result) => {
       if (err) {
         console.log(err);
