@@ -13,10 +13,13 @@ const mostrar = (req, res) => {
 };
 
 const mostrarUno = (req, res) => {
-    const { codStock } = req.params;
+    const { id } = req.params;
 
     db.query(
-        `SELECT * FROM stock WHERE codStock = ${codStock}`,
+        `select * from ingredientes i
+        inner join stock s
+        on  s.id_Ingrediente = i.idIngrediente
+        where id_Ingrediente = ${id}`,
         (err, result) => {
             if (err) {
                 console.log(err);
@@ -31,7 +34,7 @@ const mostrarUno = (req, res) => {
 
         const id = req.params.id;
 
-        db.query(`DELETE FROM stock WHERE idStock = ${id}`, (err, result) => {
+        db.query(`CALL borrarIngredienteYStock(${id});`, (err, result) => {
             if (err) {
                 console.log(err);
             } else {
