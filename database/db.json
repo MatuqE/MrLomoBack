@@ -1,0 +1,9 @@
+{
+    "productos": [
+      { "id": 1, "title": "Hamburguesa", "author": "John Doe" }
+    ],
+    "comments": [
+      { "id": 1, "body": "Some comment", "postId": 1 }
+    ]
+  }
+  
